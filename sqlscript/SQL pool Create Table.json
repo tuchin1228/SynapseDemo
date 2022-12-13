@@ -1,0 +1,17 @@
+{
+	"name": "SQL pool Create Table",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE [dbo].[MovieTest]\n(\n    [movie][varchar](200) NOT NULL,\n    [title] [varchar](200) NULL,\n\t[genres] [varchar](200) NULL,\n\t[year] [varchar](200) NULL,\n\t[Rating] [varchar](200) NULL,\n\t[Rotton Tomato] [varchar](200) NULL\n)\nWITH\n(\n    DISTRIBUTION = HASH (movie),\n    CLUSTERED COLUMNSTORE INDEX\n)\nGO\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "SynapseSQLpool",
+				"poolName": "SynapseSQLpool"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"name": "SQLServerUserTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SynapseSQLServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "age",
+				"type": "varchar"
+			},
+			{
+				"name": "company",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "user"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

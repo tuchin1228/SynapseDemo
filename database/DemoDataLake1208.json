@@ -1,0 +1,27 @@
+{
+	"name": "DemoDataLake1208",
+	"properties": {
+		"Name": "DemoDataLake1208",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true,
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"Government\",\"Version\":\"1.1.0\"}}}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://demo@synapsestorage1201.dfs.core.windows.net/DemoDataLake1208",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "metaage-synapse-workspace-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 4,
+		"ObjectId": "7cca1368-a51d-4595-971b-9b7efbc7c2a9"
+	},
+	"type": "DATABASE"
+}

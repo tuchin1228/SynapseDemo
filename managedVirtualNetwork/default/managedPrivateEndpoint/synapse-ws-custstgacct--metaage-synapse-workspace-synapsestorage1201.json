@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-custstgacct--metaage-synapse-workspace-synapsestorage1201",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/6ff8a07e-d9f6-4c7a-9e02-198ebc6930e4/resourceGroups/SynapseLab/providers/Microsoft.Storage/storageAccounts/synapsestorage1201",
+		"groupId": "dfs",
+		"fqdns": [
+			"synapsestorage1201.dfs.core.windows.net"
+		]
+	}
+}

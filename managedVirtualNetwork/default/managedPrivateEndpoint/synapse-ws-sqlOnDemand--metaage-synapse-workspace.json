@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sqlOnDemand--metaage-synapse-workspace",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/6ff8a07e-d9f6-4c7a-9e02-198ebc6930e4/resourceGroups/SynapseLab/providers/Microsoft.Synapse/workspaces/metaage-synapse-workspace",
+		"groupId": "sqlOnDemand",
+		"fqdns": [
+			"metaage-synapse-workspace-ondemand.dbefb508-29a9-4c05-b0ca-0daa0fb768c9.sql.azuresynapse.net"
+		]
+	}
+}

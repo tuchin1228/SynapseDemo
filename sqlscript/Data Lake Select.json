@@ -1,0 +1,17 @@
+{
+	"name": "Data Lake Select",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) * FROM [DemoDataLake1208].[dbo].[Users]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "DemoDataLake1208",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

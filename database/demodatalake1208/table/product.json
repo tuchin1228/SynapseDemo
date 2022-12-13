@@ -1,0 +1,109 @@
+{
+	"name": "product",
+	"properties": {
+		"Name": "product",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "demodatalake1208",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "id",
+					"Description": null,
+					"OriginDataTypeName": {
+						"TypeName": "int",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "int"
+						}
+					}
+				},
+				{
+					"Name": "productName",
+					"Description": null,
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "price",
+					"Description": null,
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 10,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					}
+				}
+			],
+			"ColumnSetEntityName": "8b7f120c-3e8e-4dd5-9ecc-4bfabceb9302",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+				"FormatType": "textfile",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"serialization.format": "1"
+				}
+			},
+			"Source": {
+				"Location": "abfss://demo@synapsestorage1201.dfs.core.windows.net/DemoDataLake1208/product",
+				"Properties": {
+					"LocationSetToDatabaseDefault": false
+				}
+			},
+			"Properties": {
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": "trusted-service-user",
+		"CreateTime": 1670492192,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"Transient_lastDdlTime": "1670492192",
+			"spark.sql.sources.schema": "{\"type\":\"struct\",\"fields\":[{\"name\":\"id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"productName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"price\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}}]}",
+			"spark.sql.create.version": "3.2.2.5.0-73283859",
+			"PrimaryKeys": "",
+			"spark.sql.sources.provider": "textfile"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c26ba227-3bb2-40ee-aca5-036fc21efe11"
+	},
+	"type": "TABLE"
+}

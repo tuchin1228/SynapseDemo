@@ -1,0 +1,42 @@
+{
+	"name": "1213OutputSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SynapseSQLServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "movie",
+				"type": "varchar"
+			},
+			{
+				"name": "title",
+				"type": "varchar"
+			},
+			{
+				"name": "genres",
+				"type": "varchar"
+			},
+			{
+				"name": "year",
+				"type": "varchar"
+			},
+			{
+				"name": "Rating",
+				"type": "varchar"
+			},
+			{
+				"name": "Rotton Tomato",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "moviesdemo"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

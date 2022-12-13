@@ -1,0 +1,42 @@
+{
+	"name": "SqlPoolMovieTable",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [
+			{
+				"name": "movie",
+				"type": "nvarchar"
+			},
+			{
+				"name": "title",
+				"type": "varchar"
+			},
+			{
+				"name": "genres",
+				"type": "varchar"
+			},
+			{
+				"name": "year",
+				"type": "varchar"
+			},
+			{
+				"name": "Rating",
+				"type": "varchar"
+			},
+			{
+				"name": "Rotton Tomato",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Movie"
+		},
+		"sqlPool": {
+			"referenceName": "SynapseSQLpool",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

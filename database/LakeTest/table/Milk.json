@@ -1,0 +1,182 @@
+{
+	"name": "Milk",
+	"properties": {
+		"Name": "Milk",
+		"EntityType": "TABLE",
+		"Namespace": {
+			"DatabaseName": "LakeTest"
+		},
+		"Description": "A dairy product.\n\nEx:\n- Whole milk\n- Reduced-fat milk\n- Low-fat milk\n- Fat-free milk\n- Organic milk\n- Raw milk\n- Acidophilus milk\n- Buttermilk\n- Calcium-enriched milk\n- Lactose-free milk\n- Low-sodium whole milk\n- Half-and-half cream\n- Light cream\n- Whipping cream\n- Heavy cream\n- Sour cream\n- Yogurt\n- Almond milk\n- Coconut milk\n- Goat's milk\n- Rice milk\n- Soy milk",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"StorageDescriptor": {
+			"Columns": [
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"BaseAttributeReference": {
+						"Entity": "Milk.cdm.json/Milk",
+						"Name": "ProductId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "PasteurizedMilkIndicator",
+					"Description": "Indicates a pasteurized milk product.\n\nThis is the process of heating raw milk at a high enough temperature for a sufficient length of time to make milk bacteriologically safe and increase its keeping quality. Most milk sold in the U.S. is pasteurized. Pasteurization has little effect on milk's nutritive value.",
+					"BaseAttributeReference": {
+						"Entity": "Milk.cdm.json/Milk",
+						"Name": "PasteurizedMilkIndicator"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "UltrapasteurizedMilkIndicator",
+					"Description": "Indicates a unpasteurized milk product.\n\nMilk that is ultrapasteurized has been heated to a higher temperature than pasteurized milk. Ultrapasteurized milk stays fresher longer under refrigeration than pasteurized milk. This process is often used for cream and eggnog.",
+					"BaseAttributeReference": {
+						"Entity": "Milk.cdm.json/Milk",
+						"Name": "UltrapasteurizedMilkIndicator"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "UltraHighTemperatureMilkIndicator",
+					"Description": "Indicates a UHT milk product.\n\nUHT milk is packaged in sterilized containers. UHT milk can be stored at room temperature for up to 3 months. Once opened, it should be refrigerated.",
+					"BaseAttributeReference": {
+						"Entity": "Milk.cdm.json/Milk",
+						"Name": "UltraHighTemperatureMilkIndicator"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "HomogenizedMilkIndicator",
+					"Description": "Indicates a homogenized milk product.\n\nHomogenization breaks up and disperses milk fat throughout milk, resulting in a smooth, uniform texture. Most whole milk is homogenized to prevent the cream from rising to the top. Homogenization results in a softer curd in the stomach that aids digestion.",
+					"BaseAttributeReference": {
+						"Entity": "Milk.cdm.json/Milk",
+						"Name": "HomogenizedMilkIndicator"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "MilkCategoryId",
+					"Description": "The unique identifier of a milk category.",
+					"BaseAttributeReference": {
+						"Entity": "Milk.cdm.json/Milk",
+						"Name": "MilkCategoryId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "MilkClassId",
+					"Description": "The unique identifier of a milk class.",
+					"BaseAttributeReference": {
+						"Entity": "Milk.cdm.json/Milk",
+						"Name": "MilkClassId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"DeltaFormatInvalidMessages": []
+				}
+			],
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://demo@synapsestorage1201.dfs.core.windows.net/LakeTest/Milk",
+					"delimiter": ",",
+					"multiLine": "false",
+					"firstRowAsHeader": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://demo@synapsestorage1201.dfs.core.windows.net/LakeTest/Milk",
+				"Properties": {
+					"LinkedServiceName": "metaage-synapse-workspace-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductId\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"ProductId\"},\"PasteurizedMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"PasteurizedMilkIndicator\"},\"UltrapasteurizedMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"UltrapasteurizedMilkIndicator\"},\"UltraHighTemperatureMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"UltraHighTemperatureMilkIndicator\"},\"HomogenizedMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"HomogenizedMilkIndicator\"},\"MilkCategoryId\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"MilkCategoryId\"},\"MilkClassId\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"MilkClassId\"}}}"
+			},
+			"Compressed": false,
+			"IsStoredAsSubdirectories": false
+		},
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Milk\",\"path\":\"Milk.cdm.json/Milk\"},\"description\":\"A dairy product.\\n\\nEx:\\n- Whole milk\\n- Reduced-fat milk\\n- Low-fat milk\\n- Fat-free milk\\n- Organic milk\\n- Raw milk\\n- Acidophilus milk\\n- Buttermilk\\n- Calcium-enriched milk\\n- Lactose-free milk\\n- Low-sodium whole milk\\n- Half-and-half cream\\n- Light cream\\n- Whipping cream\\n- Heavy cream\\n- Sour cream\\n- Yogurt\\n- Almond milk\\n- Coconut milk\\n- Goat's milk\\n- Rice milk\\n- Soy milk\",\"primaryKey\":[\"ProductId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"PasteurizedMilkIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates a pasteurized milk product.\\n\\nThis is the process of heating raw milk at a high enough temperature for a sufficient length of time to make milk bacteriologically safe and increase its keeping quality. Most milk sold in the U.S. is pasteurized. Pasteurization has little effect on milk's nutritive value.\",\"isNullable\":true,\"name\":\"PasteurizedMilkIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"UltrapasteurizedMilkIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates a unpasteurized milk product.\\n\\nMilk that is ultrapasteurized has been heated to a higher temperature than pasteurized milk. Ultrapasteurized milk stays fresher longer under refrigeration than pasteurized milk. This process is often used for cream and eggnog.\",\"isNullable\":true,\"name\":\"UltrapasteurizedMilkIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"UltraHighTemperatureMilkIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates a UHT milk product.\\n\\nUHT milk is packaged in sterilized containers. UHT milk can be stored at room temperature for up to 3 months. Once opened, it should be refrigerated.\",\"isNullable\":true,\"name\":\"UltraHighTemperatureMilkIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"HomogenizedMilkIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates a homogenized milk product.\\n\\nHomogenization breaks up and disperses milk fat throughout milk, resulting in a smooth, uniform texture. Most whole milk is homogenized to prevent the cream from rising to the top. Homogenization results in a softer curd in the stomach that aids digestion.\",\"isNullable\":true,\"name\":\"HomogenizedMilkIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"MilkCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a milk category.\",\"isNullable\":true,\"name\":\"MilkCategoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"MilkClassId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a milk class.\",\"isNullable\":true,\"name\":\"MilkClassId\"}]}}}",
+			"Description": "A dairy product.\n\nEx:\n- Whole milk\n- Reduced-fat milk\n- Low-fat milk\n- Fat-free milk\n- Organic milk\n- Raw milk\n- Acidophilus milk\n- Buttermilk\n- Calcium-enriched milk\n- Lactose-free milk\n- Low-sodium whole milk\n- Half-and-half cream\n- Light cream\n- Whipping cream\n- Heavy cream\n- Sour cream\n- Yogurt\n- Almond milk\n- Coconut milk\n- Goat's milk\n- Rice milk\n- Soy milk",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "ProductId",
+			"spark.sql.sources.provider": "csv",
+			"sql:IsAppendOnly": false
+		},
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false
+	},
+	"type": "TABLE"
+}

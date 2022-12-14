@@ -94,7 +94,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"compression": "",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CoatingId\":{\"entity\":\"Coating.cdm.json/Coating\",\"name\":\"CoatingId\"},\"CoatingName\":{\"entity\":\"Coating.cdm.json/Coating\",\"name\":\"CoatingName\"},\"CoatingDescription\":{\"entity\":\"Coating.cdm.json/Coating\",\"name\":\"CoatingDescription\"}}}"
 			},
 			"Compressed": false,
@@ -105,8 +105,7 @@
 			"Description": "A coating associated with an apparel product.\n\nEx:\nCoating:  A finishing process in which a substance - like rubber, resin or synthetic compounds - covers the fabric on one or both sides.  Polyurethane is a common coating for outerwear.  Coating typically aids water-resistance.\n\nUrethane coated:  A thin layer of polyurethane is sprayed onto backside of fabric to waterproof, yet accommodates silkening.",
 			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
 			"PrimaryKeys": "CoatingId",
-			"spark.sql.sources.provider": "csv",
-			"sql:IsAppendOnly": false
+			"spark.sql.sources.provider": "csv"
 		},
 		"Retention": 0,
 		"Temporary": false,

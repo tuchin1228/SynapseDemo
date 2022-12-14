@@ -160,7 +160,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"compression": "",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductId\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"ProductId\"},\"PasteurizedMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"PasteurizedMilkIndicator\"},\"UltrapasteurizedMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"UltrapasteurizedMilkIndicator\"},\"UltraHighTemperatureMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"UltraHighTemperatureMilkIndicator\"},\"HomogenizedMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"HomogenizedMilkIndicator\"},\"MilkCategoryId\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"MilkCategoryId\"},\"MilkClassId\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"MilkClassId\"}}}"
 			},
 			"Compressed": false,
@@ -171,8 +171,7 @@
 			"Description": "A dairy product.\n\nEx:\n- Whole milk\n- Reduced-fat milk\n- Low-fat milk\n- Fat-free milk\n- Organic milk\n- Raw milk\n- Acidophilus milk\n- Buttermilk\n- Calcium-enriched milk\n- Lactose-free milk\n- Low-sodium whole milk\n- Half-and-half cream\n- Light cream\n- Whipping cream\n- Heavy cream\n- Sour cream\n- Yogurt\n- Almond milk\n- Coconut milk\n- Goat's milk\n- Rice milk\n- Soy milk",
 			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
 			"PrimaryKeys": "ProductId",
-			"spark.sql.sources.provider": "csv",
-			"sql:IsAppendOnly": false
+			"spark.sql.sources.provider": "csv"
 		},
 		"Retention": 0,
 		"Temporary": false,

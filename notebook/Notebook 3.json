@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "b9498d80-abea-441c-9b2c-143c94857f50"
+				"spark.autotune.trackingId": "d5e9caf7-0ec3-4060-ba17-3b8537114eb6"
 			}
 		},
 		"metadata": {
@@ -58,10 +58,10 @@
 				},
 				"source": [
 					"%%sql\r\n",
-					"USE LakeTest;\r\n",
+					"USE LakeDemo1215;\r\n",
 					"SHOW Tables"
 				],
-				"execution_count": 2
+				"execution_count": 39
 			},
 			{
 				"cell_type": "code",
@@ -152,11 +152,9 @@
 				},
 				"source": [
 					"%%sql\r\n",
-					"USE LakeTest;\r\n",
-					"SHOW TABLES;\r\n",
-					""
+					"SHOW DATABASES;"
 				],
-				"execution_count": 33
+				"execution_count": 43
 			},
 			{
 				"cell_type": "code",

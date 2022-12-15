@@ -94,7 +94,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CoatingId\":{\"entity\":\"Coating.cdm.json/Coating\",\"name\":\"CoatingId\"},\"CoatingName\":{\"entity\":\"Coating.cdm.json/Coating\",\"name\":\"CoatingName\"},\"CoatingDescription\":{\"entity\":\"Coating.cdm.json/Coating\",\"name\":\"CoatingDescription\"}}}"
 			},
 			"Compressed": false,

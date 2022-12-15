@@ -160,7 +160,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductId\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"ProductId\"},\"PasteurizedMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"PasteurizedMilkIndicator\"},\"UltrapasteurizedMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"UltrapasteurizedMilkIndicator\"},\"UltraHighTemperatureMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"UltraHighTemperatureMilkIndicator\"},\"HomogenizedMilkIndicator\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"HomogenizedMilkIndicator\"},\"MilkCategoryId\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"MilkCategoryId\"},\"MilkClassId\":{\"entity\":\"Milk.cdm.json/Milk\",\"name\":\"MilkClassId\"}}}"
 			},
 			"Compressed": false,

@@ -18,7 +18,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "0d3a334e-f5c4-4812-958e-4febec5c1cd1"
+				"spark.autotune.trackingId": "7a5c65fb-b0ed-42ee-ad24-1e79a6d4172d"
 			}
 		},
 		"metadata": {
@@ -303,6 +303,52 @@
 					""
 				],
 				"execution_count": 59
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					}
+				},
+				"source": [
+					"%%sql\r\n",
+					"INSERT INTO `RetailDB`.`Customer` VALUES (123, 'John', 'Yang')"
+				],
+				"execution_count": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"USE LakeTest;\r\n",
+					"SELECT * FROM Milk"
+				],
+				"execution_count": 65
 			}
 		]
 	}

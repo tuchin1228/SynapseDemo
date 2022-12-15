@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "b19ee0e2-c225-40ba-a902-12a7d689536a"
+				"spark.autotune.trackingId": "b9498d80-abea-441c-9b2c-143c94857f50"
 			}
 		},
 		"metadata": {
@@ -146,15 +146,17 @@
 						}
 					},
 					"microsoft": {
-						"language": "python"
-					}
+						"language": "sparksql"
+					},
+					"collapsed": false
 				},
 				"source": [
-					"%%pyspark\r\n",
-					"df = spark.sql(\"SELECT * FROM `DemoDataLake1208`.`Users`\")\r\n",
-					"df.show(10)"
+					"%%sql\r\n",
+					"USE LakeTest;\r\n",
+					"SHOW TABLES;\r\n",
+					""
 				],
-				"execution_count": 15
+				"execution_count": 33
 			},
 			{
 				"cell_type": "code",
@@ -176,10 +178,13 @@
 				"source": [
 					"%%sql\r\n",
 					"USE DemoDataLake1208;\r\n",
-					"SHOW TABLES;\r\n",
+					"-- SHOW TABLES;\r\n",
+					"-- SELECT * FROM DemoDataLake1208.Users;\r\n",
+					"-- SELECT * FROM DemoDataLake1208.product;\r\n",
+					"SELECT * FROM DemoDataLake1208.Activity;\r\n",
 					""
 				],
-				"execution_count": 24
+				"execution_count": 30
 			}
 		]
 	}

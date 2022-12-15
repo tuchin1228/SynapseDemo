@@ -1,0 +1,22 @@
+{
+	"name": "LakeDemo1215",
+	"properties": {
+		"Name": "LakeDemo1215",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://demo@synapsestorage1201.dfs.core.windows.net/LakeDemo1215",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "metaage-synapse-workspace-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
